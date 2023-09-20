@@ -1,5 +1,13 @@
 import React from 'react';
-import {View, SafeAreaView, Text} from 'react-native';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  FlatList,
+  Image,
+  ListRenderItem,
+} from 'react-native';
 
 const imageUrl = 'https://static.thenounproject.com/png/3137368-200.png';
 
@@ -51,15 +59,98 @@ const staticData: details[] = [
 ];
 
 const App = () => {
+  const renderEachItem: ListRenderItem<details> = ({item, index}: any) => (
+    <View
+      style={[
+        styles.margins,
+        styles.nameAddressContainer,
+        index % 2 === 0 ? styles.tealColor : styles.peachColor,
+      ]}>
+      <View>
+        <Image style={styles.avatarImage} source={{uri: item.img}} />
+      </View>
+      <View style={[styles.textContainer]}>
+        <View>
+          <Text style={{fontWeight: '800'}}>{item.name}</Text>
+          <Text>{item.address}</Text>
+        </View>
+      </View>
+      <Image style={styles.ellipsis} source={{uri: imageUrl}} />
+    </View>
+  );
   return (
     <SafeAreaView>
-      <View>
-        <Text>
-          Hello
-        </Text>
+      <View style={styles.backgroundColor}>
+        <Text style={styles.contact}>Contact List</Text>
+        <FlatList
+          style={styles.contact}
+          data={staticData}
+          renderItem={renderEachItem}
+          keyExtractor={item => item.id.toString()}
+        />
       </View>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  backgroundColor: {
+    backgroundColor: '#FFFFFF',
+    marginVertical: 10,
+    marginHorizontal: 10,
+    borderRadius: 10,
+  },
+  margins: {
+    marginVertical: 10,
+    paddingHorizontal: 10,
+  },
+  contact: {
+    fontFamily: 'Open Sans',
+    fontSize: 27,
+    fontWeight: '700',
+    marginVertical: 10,
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 20,
+  },
+  peachColor: {
+    backgroundColor: '#FFE5B4',
+    padding: 10,
+    borderRadius: 20,
+    marginVertical: 10,
+  },
+  tealColor: {
+    backgroundColor: '#B6E2D3',
+    padding: 10,
+    borderRadius: 20,
+  },
+  nameAddressContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  textContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  ellipsis: {
+    height: 30,
+    width: 30,
+  },
+  avatarImage: {
+    height: 30,
+    width: 30,
+    margin: 10,
+    padding: 20,
+  },
+  tealBorderColor: {
+    borderColor: '#000000',
+    borderRadius: 60,
+  },
+  peachBorderColor: {
+    borderColor: '#FFFFFF',
+    borderRadius: 10,
+  },
+});
 
 export default App;
