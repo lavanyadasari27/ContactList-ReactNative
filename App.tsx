@@ -1,7 +1,9 @@
-import React, {useEffect} from 'react';
-import {View, SafeAreaView, Text} from 'react-native/types';
+import React from 'react';
+import {View, SafeAreaView, Text} from 'react-native';
 
-const App: React.FC = () => {
+const imageUrl = 'https://static.thenounproject.com/png/3137368-200.png';
+
+const App = () => {
   return (
     <SafeAreaView>
       <View>
