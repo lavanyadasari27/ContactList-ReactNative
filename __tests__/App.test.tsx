@@ -13,3 +13,15 @@ test('renders at least one contact name', () => {
   const contactName = screen.getByText('Kathryn Murphy');
   expect(contactName).toBeTruthy();
 });
+
+test('renders at least one contact name', () => {
+  render(<App />);
+  const contactName = screen.getByText('Kathryn Murphy');
+  expect(contactName).toBeTruthy();
+});
+
+test('renders at least one contact address', () => {
+  render(<App />);
+  const contactAddress = screen.getByText('6391 Elgin St. Celina, Delaware');
+  expect(contactAddress).toBeTruthy();
+});
