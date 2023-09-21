@@ -1,5 +1,13 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+This is a simple React Native app that displays a list of contacts with their names, addresses, and avatars. 
+
+## Features
+
+- Displays a list of contacts with their names and addresses.
+- Alternates background colors are provided.
+- Used different avatars for each contact.
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
@@ -55,9 +63,39 @@ Now that you have successfully run the app, let's modify it.
 
    For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-## Congratulations! :tada:
+## To run this App:
 
-You've successfully run and modified your React Native App. :partying_face:
+To get this project up and running on your local machine, follow these steps:
+
+1. Clone the repository:
+
+  ```
+   git clone https://github.com/lavanyadasari27/ContactList-ReactNative.git
+```
+
+2. Navigate to the project directory:
+
+```
+   cd react-native-contact-list
+```  
+
+3. Install dependencies:
+
+```
+   npm install
+```  
+
+4. Start the app:
+
+```
+   npm start
+```  
+
+You can run the app on an emulator/ simulator by following the instructions provided in the console.
+
+## Usage
+
+Once the app is running, you will see a screen displaying a list of contacts. Each contact includes their name, address, and avatar.
 
 ### Now what?
 
