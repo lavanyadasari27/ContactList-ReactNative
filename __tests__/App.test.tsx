@@ -7,3 +7,9 @@ test('renders contact list', () => {
   const header = screen.getByText('Contact List');
   expect(header).toBeTruthy();
 });
+
+test('renders at least one contact name', () => {
+  render(<App />);
+  const contactName = screen.getByText('Kathryn Murphy');
+  expect(contactName).toBeTruthy();
+});

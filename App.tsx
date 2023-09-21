@@ -19,7 +19,7 @@ export type details = {
 };
 
 
-const staticData: details[] = [
+export const staticData: details[] = [
   {
     name: 'Kathryn Murphy',
     address: '6391 Elgin St. Celina, Delaware',
