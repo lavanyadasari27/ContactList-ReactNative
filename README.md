@@ -97,6 +97,10 @@ You can run the app on an emulator/ simulator by following the instructions prov
 
 Once the app is running, you will see a screen displaying a list of contacts. Each contact includes their name, address, and avatar.
 
+## Video
+
+https://github.com/lavanyadasari27/ContactList-ReactNative/assets/127495745/fd14afcc-d88c-4e95-9e2b-5c69a384d266
+
 ### Now what?
 
 - If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
